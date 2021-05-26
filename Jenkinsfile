@@ -7,7 +7,7 @@ peline {
         jdk 'JDK11'
     }
 
-    parmaters {
+    paramaters {
 	string(name: 'BRANCH', defaultValue: 'master', description: 'Git branch of the Java Project')
     }
     stages {
