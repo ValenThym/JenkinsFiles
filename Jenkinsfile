@@ -7,7 +7,7 @@ pipeline {
         jdk 'JDK11'
     }
 
-    paramaters {
+    parameters {
 	string(name: 'BRANCH', defaultValue: 'master', description: 'Git branch of the Java Project')
     }
     stages {
