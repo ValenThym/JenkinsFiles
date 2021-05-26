@@ -37,7 +37,7 @@ pipeline {
             steps {
                 sh "mvn -DskipTests package"
 		archiveArtifacts 'target/*.jar'
-		sh "cp target/*.jar /home/srvadmin/repoArtifacts/"
+		sh "cp target/*.jar /home/srvadmin/repoArtifacts/`date +%Y%m%d`-movieapp.jar"
             }
         }
     }
