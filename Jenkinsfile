@@ -7,12 +7,15 @@ peline {
         jdk 'JDK11'
     }
 
+    parmaters {
+	string(name: 'BRANCH', defaultValue: 'master', description: 'Git branch of the Java Project')
+    }
     stages {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
                 git url: 'https://github.com/matthcol/movieapijava2021.git',
-                    branch: 'dev'
+                    branch: "${params.BRANCH}"
                 // Run Maven on a Unix agent.
                 sh "mvn clean compile"
                 // To run Maven on a Windows agent, use
